@@ -43,7 +43,7 @@ namespace nnforge
 	protected:
 		random_generator generator;
 
-		std::tr1::uniform_real<float> contrast_distribution;
-		std::tr1::uniform_real<float> brightness_shift_distribution;
+		std::uniform_real_distribution<float> contrast_distribution;
+		std::uniform_real_distribution<float> brightness_shift_distribution;
 	};
 }

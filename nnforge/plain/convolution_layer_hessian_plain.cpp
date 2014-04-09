@@ -97,7 +97,7 @@ namespace nnforge
 
 			#pragma omp parallel default(none) num_threads(plain_config->openmp_thread_count)
 			{
-				std::tr1::array<unsigned int, max_dimension_count> current_output_position;
+				std::array<unsigned int, max_dimension_count> current_output_position;
 
 				#pragma omp for schedule(guided)
 				for(int workload_id = 0; workload_id < total_workload; ++workload_id)
@@ -199,7 +199,7 @@ namespace nnforge
 
 			#pragma omp parallel default(none) num_threads(plain_config->openmp_thread_count)
 			{
-				std::tr1::array<unsigned int, max_dimension_count> current_output_position;
+				std::array<unsigned int, max_dimension_count> current_output_position;
 
 				#pragma omp for schedule(guided)
 				for(int workload_id = 0; workload_id < total_workload; ++workload_id)
@@ -306,7 +306,7 @@ namespace nnforge
 
 			#pragma omp parallel default(none) num_threads(plain_config->openmp_thread_count)
 			{
-				std::tr1::array<unsigned int, max_dimension_count> current_output_position;
+				std::array<unsigned int, max_dimension_count> current_output_position;
 				std::vector<float> weights_global(const_window_elem_count, 0.0F);
 				std::vector<float> weights_local(const_window_elem_count, 0.0F);
 

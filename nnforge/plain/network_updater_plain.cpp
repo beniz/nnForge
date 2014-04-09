@@ -174,7 +174,7 @@ namespace nnforge
 			}
 
 			random_generator gen = rnd::get_random_generator();
-			std::tr1::uniform_int<unsigned int> dist(0, static_cast<unsigned int>(random_uniform_list.size() - 1));
+			std::uniform_int_distribution<unsigned int> dist(0, static_cast<unsigned int>(random_uniform_list.size() - 1));
 			unsigned int mask = static_cast<unsigned int>(random_uniform_list.size() - 1);
 			bool entries_remained_for_loading = true;
 			while (entries_remained_for_loading)

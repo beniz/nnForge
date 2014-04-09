@@ -42,6 +42,6 @@ namespace nnforge
 		bool is_same_sequence_from_reset;
 		random_generator generator;
 
-		std::tr1::uniform_int<int> max_noise_distribution;
+		std::uniform_int_distribution<int> max_noise_distribution;
 	};
 }

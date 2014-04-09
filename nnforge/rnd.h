@@ -16,11 +16,11 @@
 
 #pragma once
 
-#include <random>
+#include <random> //TODO: be sure to include C++11 version instead of tr1.
 
 namespace nnforge
 {
-	typedef std::tr1::mt19937 random_generator;
+	typedef std::mt19937 random_generator;
 
 	class rnd
 	{

@@ -1,21 +1,21 @@
 BUILD_MODE=release
-ENABLE_CUDA_BACKEND=yes
+ENABLE_CUDA_BACKEND=no
 ENABLE_CUDA_PROFILING=no
-BOOST_PATH=/usr/local
-OPENCV_PATH=/usr/local
-NETCDF_INSTALLED=yes
+BOOST_PATH=/usr
+OPENCV_PATH=/usr
+NETCDF_INSTALLED=no
 NETCDF_PATH=
 CUDA_PATH=/usr/local/cuda
 NVCC=nvcc
 NNFORGE_PATH=../..
-NNFORGE_INPUT_DATA_PATH=/home/max/nnforge/input_data
-NNFORGE_WORKING_DATA_PATH=/home/max/nnforge/working_data
+NNFORGE_INPUT_DATA_PATH=/home/beniz/nnforge/input_data
+NNFORGE_WORKING_DATA_PATH=/home/beniz/nnforge/working_data
 
-BOOST_LIBS=-lboost_thread-mt -lboost_regex-mt -lboost_chrono-mt -lboost_filesystem-mt -lboost_program_options-mt -lboost_random-mt -lboost_system-mt -lboost_date_time-mt
+BOOST_LIBS=-lboost_thread -lboost_regex -lboost_chrono -lboost_filesystem -lboost_program_options -lboost_random -lboost_system -lboost_date_time
 OPENCV_LIBS=-lopencv_highgui -lopencv_imgproc -lopencv_core
 NETCDF_LIBS=-lnetcdf
 
-CPP_FLAGS_COMMON=-ffast-math -march=native -mfpmath=sse -msse2 # -mavx
+CPP_FLAGS_COMMON=-ffast-math -march=native -mfpmath=sse -msse2 -g -std=c++11 # -mavx
 CPP_FLAGS_DEBUG_MODE=-g
 CPP_FLAGS_RELEASE_MODE=-O3
 

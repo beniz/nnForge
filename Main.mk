@@ -10,7 +10,7 @@ LDFLAGS+=-L$(NNFORGE_PATH)/lib
 endif
 
 ifeq ($(USE_BOOST),yes)
-CXXFLAGS+=-I$(BOOST_PATH)/include/boost/tr1/tr1 -I$(BOOST_PATH)/include
+CXXFLAGS+=-I$(BOOST_PATH)/include -I$(BOOST_PATH)/include/boost/tr1/tr1 
 LDFLAGS+=-L$(BOOST_PATH)/lib $(BOOST_LIBS)
 endif
 
@@ -23,8 +23,8 @@ LDFLAGS+=$(NETCDF_LIBS)
 endif
 
 ifeq ($(USE_CUDA),yes)
-CXXFLAGS+=-I$(CUDA_PATH)/include
-LDFLAGS+=-L$(CUDA_PATH)/lib64 -L$(CUDA_PATH)/lib -lcublas -lcudart
+#CXXFLAGS+=-I$(CUDA_PATH)/include
+#LDFLAGS+=-L$(CUDA_PATH)/lib64 -L$(CUDA_PATH)/lib -lcublas -lcudart
 endif
 
 ifeq ($(USE_OPENCV),yes)

@@ -122,11 +122,11 @@ void gtsrb_toolset::write_folder(
 	boost::filesystem::ifstream file_input(annotation_file_path, std::ios_base::in);
 
 	nnforge::random_generator generator = nnforge::rnd::get_random_generator();
-	std::tr1::uniform_real<float> rotate_angle_distribution(-max_rotation_angle_in_degrees, max_rotation_angle_in_degrees);
-	std::tr1::uniform_real<float> scale_distribution(1.0F / max_scale_factor, max_scale_factor);
-	std::tr1::uniform_real<float> shift_distribution(-max_shift, max_shift);
-	std::tr1::uniform_real<float> contrast_distribution(1.0F / max_contrast_factor, max_contrast_factor);
-	std::tr1::uniform_real<float> brightness_shift_distribution(-max_brightness_shift, max_brightness_shift);
+	std::uniform_real_distribution<float> rotate_angle_distribution(-max_rotation_angle_in_degrees, max_rotation_angle_in_degrees);
+	std::uniform_real_distribution<float> scale_distribution(1.0F / max_scale_factor, max_scale_factor);
+	std::uniform_real_distribution<float> shift_distribution(-max_shift, max_shift);
+	std::uniform_real_distribution<float> contrast_distribution(1.0F / max_contrast_factor, max_contrast_factor);
+	std::uniform_real_distribution<float> brightness_shift_distribution(-max_brightness_shift, max_brightness_shift);
 
 	std::string str;
 	std::getline(file_input, str); // read the header

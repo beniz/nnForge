@@ -173,7 +173,7 @@ void galaxy_zoo_toolset::prepare_training_data()
 	unsigned int training_entry_count_written = 0;
 	unsigned int validating_entry_count_written = 0;
 	nnforge::random_generator gen = nnforge::rnd::get_random_generator();
-	std::tr1::uniform_real<float> dist(0.0F, 1.0F);
+	std::uniform_real_distribution<float> dist(0.0F, 1.0F);
 	while (true)
 	{
 		std::string str;

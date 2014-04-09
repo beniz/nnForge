@@ -118,7 +118,7 @@ namespace nnforge
 
 		for(unsigned int entry_to_write_count = entry_count; entry_to_write_count > 0; --entry_to_write_count)
 		{
-			std::tr1::uniform_int<unsigned int> dist(0, entry_to_write_count - 1);
+			std::uniform_int_distribution<unsigned int> dist(0, entry_to_write_count - 1);
 
 			unsigned int index = dist(rnd);
 			unsigned int entry_id = entry_to_write_list[index];
@@ -222,7 +222,7 @@ namespace nnforge
 
 	unsigned int randomized_classifier_keeper::peek_random(random_generator& rnd)
 	{
-		std::tr1::uniform_int<unsigned int> dist(0, static_cast<unsigned int>(entry_id_list.size()) - 1);
+		std::uniform_int_distribution<unsigned int> dist(0, static_cast<unsigned int>(entry_id_list.size()) - 1);
 
 		unsigned int index = dist(rnd);
 		unsigned int entry_id = entry_id_list[index];

@@ -106,7 +106,7 @@ namespace nnforge
 		// Check schema-reader consistency
 		layer_config_list[layer_config_list.size() - 1].check_equality(reader.get_output_configuration());
 
-		std::tr1::uniform_real<float> dist(0.0F, 1.0F);
+		std::uniform_real_distribution<float> dist(0.0F, 1.0F);
 		for(std::vector<float>::iterator it = random_uniform_list.begin(); it != random_uniform_list.end(); ++it)
 			*it = dist(gen);
 

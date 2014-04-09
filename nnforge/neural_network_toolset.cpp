@@ -1178,7 +1178,7 @@ namespace nnforge
 
 		std::vector<float> random_uniform_list(1 << 10);
 		random_generator gen = rnd::get_random_generator();
-		std::tr1::uniform_real<float> dist(0.0F, 1.0F);
+		std::uniform_real_distribution<float> dist(0.0F, 1.0F);
 		for(std::vector<float>::iterator it = random_uniform_list.begin(); it != random_uniform_list.end(); ++it)
 			*it = dist(gen);
 
